@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    min-width: 95%;
+    margin-top: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+header img {
+    max-width: 3.5rem;
+    display: block;
+    margin-left: 0.7em;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    order: 1;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: 700;
+}
+
+ul li {
+    display: inline;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.nav li :hover {
+    color: blue;
+}
+
+.title {
+    margin-left: 2rem;
+    text-transform: uppercase;
+    color: #2f2f2f;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.links {
+    margin: auto;
+    display: flex;
+}
+
+.links a {
+    color: #ffffff;
+}
+
+.links a ::after {
+    content: "";
+    border: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.links a :hover {
+    color: black;
+}
+
+.social {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #673ab7;
+}
+
+.social img {
+    display: block;
+    order: 1;
+    max-width: 26rem;
+}
+
+.social p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.social h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffeb3b;
+}
+
+.social div {
+    padding: 2rem;
+}
+
+.services {
+    background-image: url("./assets/icons/bg-21.png");
+    background-color: #9e9e9e17;
+    min-height: 300px;
+    display: flex;
+    padding: 2rem;
+}
+
+.help {
+    max-width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    background-color: hsl(100, 100, 100);
+    color: #ffffff;
+}
+
+.help img {
+    max-height: 100px;
+    display: block;
+    text-align: center;
+}
+
+.help p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.serv1,
+.serv2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    background-color: #1d5d90;
+    color: #fafbfd;
+    text-align: center;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 100%;
+    order: 1;
+}
+
+.about .statment {
+    width: 70%;
+    order: 2;
+    padding: 1rem;
+}
+
+.statment p {
+    margin: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+}
+
+.about .p3 {
+    width: 100%;
+    order: 3;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.about img {
+    max-width: 30%;
+    order: 2;
+    margin: auto;
+}
+
+
+/* Slideshow container */
+
+.projects {
+    background-color: #f2f2f2;
+}
+
+.projects h5 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.slideshow-container {
+    max-width: 50rem;
+    position: relative;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.contact {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url("./assets//icons/bg-9.png");
+    background-color: #1d5d90;
+    color: #f0f0f0;
+}
+
+.contact h3 {
+    order: 1;
+    width: 100%;
+}
+
+.phone {
+    order: 2;
+    width: calc(50% - 2rem);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail {
+    order: 3;
+    width: calc(50% - 2rem);
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact img {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    align-self: center;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #f0f0f0;
+    display: block;
+}
+
+.contact p {
+    order: 4;
+    width: 100%;
+}
+
+@media only screen and (max-width: 300px) {
+    .container {
+        min-width: 90%;
+        margin: 0.2rem;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        max-width: 100%;
+        min-height: 1em;
+        order: 1;
+    }
+    header img {
+        max-width: 2rem;
+    }
+    ul li {
+        display: inline;
+        margin: 0.5rem;
+        font-size: 0.01em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        min-width: 90%;
+        margin: 1rem;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        max-width: 100%;
+        min-height: 1em;
+        order: 1;
+    }
+    header img {
+        max-width: 3rem;
+    }
+    ul li {
+        display: inline;
+        margin: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        min-width: 90%;
+        margin: 0.5rem;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        max-width: 100%;
+        min-height: 1em;
+        order: 1;
+    }
+    header img {
+        max-width: 3rem;
+    }
+    ul li {
+        display: inline;
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .container {
+        min-width: 90%;
+        margin: 0.5rem;
+    }
+    .nav {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        max-width: 100%;
+        min-height: 1em;
+        order: 1;
+    }
+    header img {
+        max-width: 3rem;
+    }
+    ul li {
+        display: inline;
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
+}
