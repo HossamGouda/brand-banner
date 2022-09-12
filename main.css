@@ -6,6 +6,15 @@
     padding: 0;
 }
 
+img,
+picture,
+video,
+svg {
+    max-width: 100%;
+    object-fit: contain;
+    /* preserve a nice aspect-ratio */
+}
+
 html {
     width: 100%;
     height: 100vh;
@@ -59,16 +68,22 @@ ul li {
     font-size: 1.5rem;
 }
 
-.nav li :hover {
-    color: blue;
+.nav a :hover {
+    background-image: linear-gradient( to right, #2f2f2f, #846f3f, #ba6126, #846f3f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .title {
     margin-left: 2rem;
     text-transform: uppercase;
-    color: #2f2f2f;
     font-weight: 900;
     font-size: 1.5rem;
+    background-image: linear-gradient( to right, #2f2f2f, #846f3f, #ba6126, #846f3f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .links {
