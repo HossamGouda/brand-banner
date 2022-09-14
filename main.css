@@ -463,7 +463,7 @@ ul a :hover::after {
         flex-direction: column;
         width: 100%;
         order: 1;
-        padding: 0rem;
+        padding: 0.5rem;
     }
     header img {
         max-width: 3rem;
