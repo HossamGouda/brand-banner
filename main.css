@@ -126,7 +126,7 @@ ul a :hover::after {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.5rem;
-    background-image: linear-gradient( to right, #2f2f2f, #846f3f, #ba6126, #846f3f);
+    background-image: linear-gradient( to right, #030000, #0f0f0f, #9b6828, #ce8e2a, #e8af40);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -248,8 +248,9 @@ ul a :hover::after {
 
 .about img {
     max-width: 30%;
-    order: 2;
+    order: 1;
     margin: auto;
+    filter: invert(1);
 }
 
 
@@ -257,12 +258,20 @@ ul a :hover::after {
 
 .projects {
     background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .projects h5 {
     text-align: center;
     font-weight: 700;
     font-size: 1.5rem;
+    background-image: linear-gradient( to left, #030000, #0f0f0f, #9b6828, #ce8e2a, #e8af40);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .slideshow-container {
@@ -439,10 +448,13 @@ ul a :hover::after {
 .contact p {
     order: 5;
     width: 100%;
+    font-size: 0.9rem;
+    font-weight: 100;
+    opacity: 0.7;
 }
 
 .socialmedia {
-    width: 10%;
+    width: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -470,7 +482,7 @@ ul a :hover::after {
         display: block;
         position: absolute;
         top: 1rem;
-        right: 2rem;
+        right: 1rem;
     }
     .nav {
         display: flex;
@@ -554,6 +566,19 @@ ul a :hover::after {
         align-items: center;
         justify-content: center;
     }
+    .about img {
+        max-width: 30%;
+        order: 1;
+        margin: auto;
+        filter: invert(1);
+    }
+    .about h2 {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 100%;
+        order: 1;
+    }
     .contact img {
         width: 2rem;
         margin-right: 0.4rem;
@@ -564,13 +589,19 @@ ul a :hover::after {
     }
     .statment p {
         margin: 0.5rem;
-        font-size: 1.3rem;
+        font-size: 1rem;
         padding: 0.5rem;
     }
     .about .statment {
         width: 100%;
         order: 2;
         padding: 1rem;
+    }
+    .about .p3 {
+        width: 100%;
+        order: 3;
+        padding: 1rem;
+        font-size: 1rem;
     }
     .contact h3 {
         font-size: 0.8rem;
