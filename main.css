@@ -437,8 +437,23 @@ ul a :hover::after {
 }
 
 .contact p {
-    order: 4;
+    order: 5;
     width: 100%;
+}
+
+.socialmedia {
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    order: 4;
+}
+
+.socialmedia i {
+    font-size: 1.7rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
 }
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
