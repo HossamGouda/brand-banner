@@ -554,11 +554,13 @@ ul a :hover::after {
         align-items: center;
         justify-content: center;
     }
-    .about img {
-        max-width: 70%;
-        order: 1;
-        margin: auto;
-        margin-top: 1rem;
+    .contact img {
+        width: 2rem;
+        margin-right: 0.4rem;
+        height: 2rem;
+        display: block;
+        align-self: center;
+        filter: invert(1);
     }
     .statment p {
         margin: 0.5rem;
@@ -570,6 +572,30 @@ ul a :hover::after {
         order: 2;
         padding: 1rem;
     }
+    .contact h3 {
+        font-size: 0.8rem;
+    }
+    .contact p {
+        order: 6;
+        width: 100%;
+        font-size: 0.6rem;
+        margin-top: 0.5rem;
+    }
+    .socialmedia {
+        width: 100%;
+        font-size: 1rem;
+        justify-content: space-around;
+        order: 5;
+        padding: 0 2rem;
+    }
+    .phone {
+        order: 1;
+        width: 100%;
+    }
+    .mail {
+        order: 2;
+        width: 100%;
+    }
 }
 
-@media screen and (min-width: 600px) and (max-width: 600px) {}
+@media screen and (min-width: 600px) and (max-width: 900px) {}
