@@ -22,7 +22,6 @@ body {
 
 .container {
     min-width: 95%;
-    margin-top: 8rem;
     margin-left: 1rem;
     margin-right: 1rem;
 }
@@ -69,15 +68,11 @@ header img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
     order: 1;
-    overflow: hidden;
     background-color: #f0f0f0;
-    overflow: hidden;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    z-index: 999;
 }
 
 .nav ul {
@@ -217,14 +212,23 @@ ul a :hover::after {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .about h2 {
-    margin-top: 1rem;
     font-size: 2rem;
     font-weight: 600;
     width: 100%;
     order: 1;
+}
+
+.statment {
+    width: 70%;
+    order: 2;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    margin: 0.1rem;
 }
 
 .about .statment {
@@ -234,23 +238,19 @@ ul a :hover::after {
 }
 
 .statment p {
-    margin: 1.5rem;
-    font-size: 1.3rem;
+    width: 60%;
+    height: 100%;
+    margin: 0.5rem;
+    font-size: 1rem;
     padding: 0.5rem;
-}
-
-.about .p3 {
-    width: 100%;
-    order: 3;
-    padding: 2rem;
-    font-size: 1.5rem;
+    text-align: center;
 }
 
 .about img {
-    max-width: 30%;
+    width: 25%;
     order: 1;
-    margin: auto;
     filter: invert(1);
+    margin: 0.1rem;
 }
 
 
