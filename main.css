@@ -427,6 +427,7 @@ ul a :hover::after {
     height: 2rem;
     display: block;
     align-self: center;
+    filter: invert(1);
 }
 
 .contact a {
