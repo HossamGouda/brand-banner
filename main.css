@@ -1,3 +1,14 @@
+/*General settings Start */
+:root {
+  --brand_color_one--: hsl(0, 100%, 1%);
+  --brand_color_two--: hsl(0, 0%, 6%);
+  --brand_color_three--: hsl(33, 59%, 38%);
+  --brand_color_four--: hsl(37, 66%, 49%);
+  --brand_color_five--: hsl(40, 79%, 58%);
+  --white: hsl(0, 0%, 94%);
+  --off_white: hsl(0, 0%, 73%);
+}
+
 * {
   box-sizing: border-box;
   font-size: 1rem;
@@ -14,13 +25,14 @@ svg {
   object-fit: contain;
 }
 
+a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; */
 }
 
 .container {
@@ -29,47 +41,71 @@ body {
   margin-right: 1rem;
 }
 
-header img {
-  max-width: 3.5rem;
-  display: block;
-  margin-left: 1rem;
-}
+/*General settings End */
 
-.nav {
+/*Navbar Section start*/
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   order: 1;
-  background-color: #f0f0f0;
+  background-color: var(--white);
   z-index: 999;
   align-self: flex-start;
   position: sticky;
   top: 0;
   height: auto;
 }
+.navbar img {
+  max-width: 3.5rem;
+  display: block;
+  margin-left: 1rem;
+}
 
+.navbar .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .title {
+  font-size: 1.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    var(--brand_color_one--),
+    var(--brand_color_two--),
+    var(--brand_color_three--),
+    var(--brand_color_four--),
+    var(--brand_color_five--)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #2f2f2f;
   font-weight: 700;
 }
 
 nav a {
-  text-decoration: none;
-  color: #2f2f2f;
   padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .navbar-links :hover {
   background-image: linear-gradient(
     to right,
-    #2f2f2f,
-    #846f3f,
-    #ba6126,
-    #846f3f
+    var(--brand_color_one--),
+    var(--brand_color_two--),
+    var(--brand_color_three--),
+    var(--brand_color_four--),
+    var(--brand_color_five--)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -89,10 +125,11 @@ nav a {
   width: 100%;
   background-image: linear-gradient(
     to right,
-    #2f2f2f,
-    #846f3f,
-    #ba6126,
-    #846f3f
+    var(--brand_color_one--),
+    var(--brand_color_two--),
+    var(--brand_color_three--),
+    var(--brand_color_four--),
+    var(--brand_color_five--)
   );
 }
 
@@ -103,24 +140,15 @@ nav a {
   font-size: 1.5rem;
   background-image: linear-gradient(
     to right,
-    #030000,
-    #0f0f0f,
-    #9b6828,
-    #ce8e2a,
-    #e8af40
+    var(--brand_color_one--),
+    var(--brand_color_two--),
+    var(--brand_color_three--),
+    var(--brand_color_four--),
+    var(--brand_color_five--)
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.links {
-  margin: auto;
-  display: flex;
-}
-
-.links a {
-  color: #ffffff;
 }
 
 /* start nav small */
@@ -134,7 +162,7 @@ nav a {
 .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: var(--brand_color_one--);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -153,6 +181,9 @@ nav a {
 
 /* end nav small */
 
+/*Navbar section End*/
+
+/*Section Social Start*/
 .social {
   max-width: 100%;
   height: auto;
@@ -160,7 +191,7 @@ nav a {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #673ab7;
+  background-color: var(--brand_color_one--);
 }
 
 .social img {
@@ -185,6 +216,10 @@ nav a {
 .social div {
   padding: 2rem;
 }
+
+/*Section Social End*/
+
+/*Section Servcies Start*/
 
 .services {
   background-image: url("./assets/icons/bg-21.png");
@@ -214,13 +249,9 @@ nav a {
   font-weight: 300;
 }
 
-.serv1,
-.serv2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/*Section Servcies End*/
+
+/*Section About start*/
 
 .about {
   background-color: #1d5d90;
@@ -231,7 +262,13 @@ nav a {
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.serv1,
+.serv2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .about h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -270,6 +307,8 @@ nav a {
   margin: 0.1rem;
 }
 
+/*Section About End*/
+
 /* Slideshow container */
 
 .projects {
@@ -286,11 +325,11 @@ nav a {
   font-size: 1.5rem;
   background-image: linear-gradient(
     to left,
-    #030000,
-    #0f0f0f,
-    #9b6828,
-    #ce8e2a,
-    #e8af40
+    var(--brand_color_one--),
+    var(--brand_color_two--),
+    var(--brand_color_three--),
+    var(--brand_color_four--),
+    var(--brand_color_five--)
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -353,7 +392,7 @@ nav a {
 /* Caption text */
 
 .text {
-  color: #f2f2f2;
+  color: var(--brand_color_one--);
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -369,7 +408,7 @@ nav a {
 /* Number text (1/3 etc) */
 
 .numbertext {
-  color: #f2f2f2;
+  color: var(--brand_color_one--);
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -383,7 +422,7 @@ nav a {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--off_white);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -409,6 +448,8 @@ nav a {
     opacity: 1;
   }
 }
+
+/*Section Footer start*/
 
 .contact {
   width: 100%;
@@ -482,6 +523,9 @@ nav a {
   margin: 0.2rem;
   padding: 0.2rem;
 }
+/*Section Footer End*/
+
+/*Small Screens Settings Start */
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
   body {
@@ -499,7 +543,7 @@ nav a {
     top: 1rem;
     right: 1rem;
   }
-  .nav {
+  .navbar {
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -512,20 +556,9 @@ nav a {
     max-width: 3rem;
     margin-top: 0.5rem;
   }
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+
   .nav .active-burger {
     display: flex;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .social {
