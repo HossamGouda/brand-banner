@@ -7,6 +7,7 @@
   --brand_color_five--: hsl(40, 79%, 58%);
   --white: hsl(0, 0%, 94%);
   --off_white: hsl(0, 0%, 73%);
+  --social: #3f51b5;
 }
 
 * {
@@ -30,15 +31,24 @@ a {
   color: #2f2f2f;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(36deg 100% 50% / 32%);
 }
 
 .container {
-  min-width: 95%;
+  width: 80%;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 /*General settings End */
@@ -49,14 +59,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  min-width: 80%;
   order: 1;
   background-color: var(--white);
   z-index: 999;
   align-self: flex-start;
   position: sticky;
   top: 0;
-  height: auto;
+  position: fixed;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .navbar img {
   max-width: 3.5rem;
@@ -94,8 +107,8 @@ nav {
 
 nav a {
   padding: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .navbar-links :hover {
@@ -185,19 +198,19 @@ nav a {
 
 /*Section Social Start*/
 .social {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: var(--brand_color_one--);
+  background-color: var(--social);
 }
 
 .social img {
   display: block;
   order: 1;
-  max-width: 26rem;
+  max-width: 40%;
+  margin-top: 2rem;
 }
 
 .social p {
@@ -210,7 +223,7 @@ nav a {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffeb3b;
+  color: var(--brand_color_five--);
 }
 
 .social div {
@@ -286,25 +299,42 @@ nav a {
 }
 
 .about .statment {
-  width: 70%;
+  width: 100%;
   order: 2;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.statment p {
-  width: 60%;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 100%;
   height: 100%;
   margin: 0.5rem;
   font-size: 1rem;
   padding: 0.5rem;
-  text-align: center;
+  background-color: var(--white);
+  color: var(--brand_color_one--);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.card img {
+  display: block;
+  max-width: 350px;
+  max-height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s;
 }
 
-.about img {
-  width: 25%;
-  order: 1;
-  filter: invert(1);
-  margin: 0.1rem;
+.img-holder :hover {
+  transform: scale(1.3);
 }
 
 /*Section About End*/
