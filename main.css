@@ -413,13 +413,14 @@ nav a {
 /* Caption text */
 
 .text {
-    color: var(--brand_color_one--);
+    color: var(--white);
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
+    display: none;
 }
 
 .circles {
@@ -524,6 +525,7 @@ nav a {
     text-decoration: none;
     color: #f0f0f0;
     display: block;
+    margin-left: 0.4rem;
 }
 
 .contact p {
