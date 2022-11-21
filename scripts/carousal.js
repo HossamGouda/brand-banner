@@ -3,11 +3,6 @@ const images = document.getElementById("images");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
 const img = document.querySelectorAll("#images img");
-console.log(images);
-console.log(img);
-console.log(leftBtn);
-console.log(rightBtn);
-console.log(img);
 
 //iniate index
 let idx = 0;
