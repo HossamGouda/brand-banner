@@ -1,5 +1,3 @@
-//scroll top start
-
 let mybutton = document.getElementById("myBtn");
 
 window.onscroll = function () {
@@ -20,3 +18,13 @@ function topFunction() {
 }
 
 //scroll top end
+
+/**
+ * if screen width > 562px or higher clear this function
+ *
+ *
+ *
+ *
+ *
+ *
+ */

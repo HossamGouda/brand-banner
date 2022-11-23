@@ -1,4 +1,3 @@
-// images Silder start
 const images = document.getElementById("images");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");

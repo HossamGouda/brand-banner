@@ -1,5 +1,3 @@
-//burger menue start
-
 function myFunction(x) {
   x.classList.toggle("change");
   const element = document.querySelector(".navbar-links");

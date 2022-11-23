@@ -1,4 +1,4 @@
-/*General settings Start */
+/* Start Global Rules */
 
 :root {
     --brand_color_one--: hsl(0, 100%, 1%);
@@ -12,11 +12,9 @@
 }
 
 * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 1rem;
-    font-family: "Cairo", sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 img,
@@ -27,66 +25,74 @@ svg {
     object-fit: contain;
 }
 
-a {
-    text-decoration: none;
-    color: #2f2f2f;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--brand_color_three--);
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--brand_color_five--);
 }
 
 .container {
-    width: 80%;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    display: grid;
-    gap: 1.3rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-/*General settings End */
+/* Small */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
 
 
-/*Navbar Section start*/
+/* Medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+/* Large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* End Global Rules */
+
+
+/*header & Navbar Start*/
+
+.header {
+    position: sticky;
+    top: 0;
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 80%;
-    order: 1;
+    width: 100%;
     background-color: var(--white);
-    z-index: 999;
-    align-self: flex-start;
-    position: sticky;
-    top: 0;
-    position: fixed;
-    top: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .navbar img {
     max-width: 200px;
     display: block;
     margin-left: 1rem;
-}
-
-.navbar .brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 nav {
@@ -100,6 +106,8 @@ nav a {
     padding: 1rem;
     font-size: 1.3rem;
     font-weight: 500;
+    text-decoration: none;
+    color: var(--brand_color_one--);
 }
 
 .navbar-links :hover {
@@ -126,7 +134,7 @@ nav a {
 .navbar-links {
     margin-left: 2rem;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 1.5rem;
     background-image: linear-gradient( to right, var(--brand_color_one--), var(--brand_color_two--), var(--brand_color_three--), var(--brand_color_four--), var(--brand_color_five--));
     -webkit-background-clip: text;
@@ -167,7 +175,7 @@ nav a {
 /* end nav small */
 
 
-/*Navbar section End*/
+/*header & Navbar Start*/
 
 
 /*Section Social Start*/
@@ -180,6 +188,7 @@ nav a {
     padding: 2rem;
     background-color: var(--brand_color_one--);
     border-radius: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .social img {
@@ -190,7 +199,7 @@ nav a {
 }
 
 .social p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     color: #ffffff;
 }
@@ -212,33 +221,51 @@ nav a {
 
 /*Section Servcies Start*/
 
+.title {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 .services {
     /* background-image: url("./assets/icons/bg-21.png"); */
     background-color: var(--brand_color_one--);
     display: flex;
     padding: 1rem;
     border-radius: 0.3rem;
-}
-
-.help {
-    max-width: 60%;
-    text-align: center;
-    display: flex;
     flex-direction: column;
-    margin: 2rem;
-    color: #ffffff;
+    width: 100%;
+    margin-bottom: 0.3rem;
 }
 
-.help img {
-    max-height: 100px;
-    display: block;
+.ser-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.ser-card {
+    width: calc(100% / 4);
+    margin: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0.5rem;
+    background-color: var(--white);
+    color: var(--brand_color_one--);
+    border-radius: 0.5rem;
     text-align: center;
 }
 
-.help p {
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 1rem;
+.ser-cards i {
+    font-size: 4rem;
+    color: var(--brand_color_five--);
+    transition: transform 0.5s;
+}
+
+.ser-icon :hover {
+    transform: scale(1.1);
 }
 
 
@@ -257,6 +284,7 @@ nav a {
     justify-content: center;
     border-radius: 0.3rem;
     padding: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .about h2 {
@@ -286,11 +314,12 @@ nav a {
 .cards {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .card {
-    width: 100%;
+    width: calc(100% / 4);
     height: 100%;
     margin: 0.5rem;
     font-size: 1rem;
@@ -307,8 +336,7 @@ nav a {
 
 .card img {
     display: block;
-    max-width: 350px;
-    max-height: 250px;
+    max-width: 150px;
     object-fit: cover;
     transition: transform 0.5s;
 }
@@ -321,7 +349,7 @@ nav a {
 /*Section About End*/
 
 
-/* Slideshow container */
+/*Projects Carousal Start*/
 
 .projects {
     background-color: #f2f2f2;
@@ -331,6 +359,7 @@ nav a {
     flex-direction: column;
     padding: 1rem;
     border-radius: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .projects h5 {
@@ -343,6 +372,8 @@ nav a {
     color: transparent;
     padding-bottom: 1.5rem;
     line-height: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .carousel {
@@ -350,6 +381,8 @@ nav a {
     height: 530px;
     width: 500px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-container {
@@ -381,6 +414,7 @@ nav a {
     text-align: center;
     font-weight: 400;
     transition: transform 0.5s ease-in-out;
+    height: 2rem;
 }
 
 .btn:hover {
@@ -394,6 +428,9 @@ nav a {
 .btn:focus {
     outline: none;
 }
+
+
+/*Projects Carousal End*/
 
 
 /*Section Footer start*/
@@ -476,20 +513,18 @@ nav a {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 20px;
     z-index: 99;
-    border: none;
     outline: none;
-    background-color: var(--brand_color_two--);
-    color: white;
+    color: var(--brand_color_three--);
     cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
 }
 
 #myBtn:hover {
-    background-color: var(--brand_color_four--);
+    color: rgb(112, 106, 16);
     /* Add a dark-grey background on hover */
 }
 
@@ -497,14 +532,43 @@ nav a {
 /*Section Footer End*/
 
 
-/*Small Screens Settings Start */
+/*Start Slider hider for large screen*/
 
-@media screen and (min-width: 200px) and (max-width: 640px) {
-    .container {
-        width: 100%;
-        margin: 0 0.5rem;
-        gap: 1rem;
+.slider2 {
+    display: none;
+}
+
+
+/*End  Slider hider for large screen*/
+
+@media (max-width: 767px) {
+    .social {
+        flex-direction: column;
     }
+    .social img {
+        order: 0;
+    }
+    .ser-cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ser-card {
+        width: 80%;
+        padding: 3rem;
+    }
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 698px) {
     .navbar {
         position: relative;
         display: flex;
@@ -516,18 +580,11 @@ nav a {
         order: 1;
         padding: 0.5rem;
     }
-    .navbar img {
-        margin: 0;
-        max-width: 200px;
-    }
     .mob-container {
         display: block;
         position: absolute;
         top: 0.5rem;
         right: 1rem;
-    }
-    header img {
-        margin-top: 0.5rem;
     }
     .navbar-links {
         flex-direction: column;
@@ -545,62 +602,15 @@ nav a {
     }
     .navbar-links.active-burger {
         display: flex;
+        z-index: 1000;
     }
-    .social {
-        width: 100%;
-        height: auto;
-        padding: 0.1rem;
-        flex-direction: column-reverse;
+}
+
+@media (max-width: 562px) {
+    .carousel {
+        width: 80%;
     }
-    .social h1 {
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #ffeb3b;
-    }
-    .social p {
-        font-size: 1rem;
-        text-align: center;
-        color: #ffffff;
-    }
-    .social div {
-        padding: 0.5rem;
-    }
-    .services {
-        flex-direction: column;
-        padding: 0.2rem;
-    }
-    .help {
-        max-width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin: 0.2rem;
-        margin-top: 2.5rem;
-        color: #ffffff;
-    }
-    .help p {
-        margin-top: 0.5rem;
-    }
-    .about .statment {
-        justify-content: center;
-        align-items: center;
-    }
-    .cards {
-        width: 100%;
-        flex-direction: column;
-    }
-    .card img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    .socialmedia {
-        width: 100%;
-        font-size: 1rem;
-        justify-content: space-around;
-        order: 5;
-        padding: 0 2rem;
-    }
+    /*footer */
     .phone {
         order: 1;
         width: 100%;
@@ -618,119 +628,5 @@ nav a {
         font-size: 0.6rem;
         margin-top: 0.5rem;
     }
-}
-
-@media screen and (min-width: 641px) and (max-width: 1008px) {
-    .container {
-        width: 100%;
-        margin: 0 0.5rem;
-    }
-    .cards {
-        flex-direction: column;
-    }
-    .navbar {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        background-color: #ffffff;
-        flex-direction: column;
-        width: 100%;
-        order: 1;
-        padding: 1.5rem;
-        overflow-y: hidden;
-    }
-    .navbar img {
-        margin: 0;
-        max-width: 8rem;
-    }
-    .mob-container {
-        display: block;
-        position: absolute;
-        top: 0.5rem;
-        right: 1rem;
-    }
-    .navbar-links {
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        padding: 0.5rem;
-        display: none;
-    }
-    .navbar-links a {
-        font-size: 1.1rem;
-        padding: 0;
-        font-weight: 400;
-    }
-    .navbar-links.active-burger {
-        display: flex;
-    }
-    .social {
-        width: 100%;
-        height: auto;
-        padding: 0.1rem;
-        flex-direction: column-reverse;
-    }
-    .social h1 {
-        text-align: center;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #ffeb3b;
-    }
-    .social p {
-        font-size: 1rem;
-        text-align: center;
-        color: #ffffff;
-    }
-    .social div {
-        padding: 0.5rem;
-    }
-    .services {
-        flex-direction: column;
-        padding: 0.2rem;
-    }
-    .help {
-        max-width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin: 0.2rem;
-        margin-top: 2.5rem;
-        color: #ffffff;
-    }
-    .help p {
-        margin-top: 0.5rem;
-    }
-    .about .statment {
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@media screen and (min-width: 1009px) and (max-width: 1500px) {
-    .container {
-        width: 90%;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-top: 0.5rem;
-    }
-    .navbar {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        background-color: #ffffff;
-        flex-direction: column;
-        width: 100%;
-        order: 1;
-        padding: 0.5rem;
-        overflow-y: hidden;
-    }
-    .navbar-links {
-        position: absolute;
-        top: 0;
-        right: 0.5rem;
-    }
+    /*End of footer*/
 }
