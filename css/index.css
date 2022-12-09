@@ -212,7 +212,7 @@ nav a {
 }
 
 .social div {
-    padding: 2rem;
+    padding: 0.5rem;
 }
 
 
@@ -242,7 +242,7 @@ nav a {
 .ser-cards {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
 }
 
@@ -547,6 +547,7 @@ nav a {
     }
     .social img {
         order: 0;
+        max-width: 70%;
     }
     .ser-cards {
         flex-direction: column;
@@ -555,7 +556,7 @@ nav a {
     }
     .ser-card {
         width: 80%;
-        padding: 3rem;
+        padding: 1rem;
     }
     .cards {
         flex-direction: column;
@@ -564,7 +565,7 @@ nav a {
     }
     .card {
         width: 80%;
-        padding: 3rem;
+        padding: 1rem;
     }
 }
 
