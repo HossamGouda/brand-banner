@@ -433,6 +433,44 @@ nav a {
 /*Projects Carousal End*/
 
 
+/*Section partners Start*/
+
+.partner-img {
+    margin-top: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.partner-img img {
+    border-radius: 0.3rem;
+}
+
+.partners-group {
+    text-align: center;
+    background-color: var(--white);
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+.partners-group h5 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    background-image: linear-gradient( to left, var(--brand_color_one--), var(--brand_color_two--), var(--brand_color_three--), var(--brand_color_four--), var(--brand_color_five--));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 1.5rem;
+    line-height: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/*Section partners End*/
+
+
 /*Section Footer start*/
 
 .contact {
