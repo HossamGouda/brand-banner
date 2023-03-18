@@ -1,0 +1,26 @@
+.card-about {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.card-about p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: right;
+  margin-top: 0.3rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  order: 0;
+  width: 100%;
+}
