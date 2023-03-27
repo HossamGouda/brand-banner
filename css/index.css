@@ -412,8 +412,18 @@ nav a {
 }
 
 .image-container img {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 1;
+}
+
+.img-sm img {
+    object-fit: cover;
+}
+
+#box {
+    flex-shrink: 1;
     object-fit: cover;
 }
 
@@ -667,7 +677,8 @@ nav a {
 
 @media (max-width: 562px) {
     .carousel {
-        width: 80%;
+        width: 100%;
+        height: auto;
     }
     /*footer */
     .phone {
