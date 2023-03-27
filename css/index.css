@@ -257,6 +257,7 @@ nav a {
     flex-direction: column;
     width: 100%;
     margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
 }
 
 .ser-cards {
